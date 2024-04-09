@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="search-field">
+                <input type="text" id="search" placeholder="Enter city name" >
+                <button type="submit" id="btn">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+            <div class="details">
+                <div class="details-loc">
+                   <h2> <i class="fa-solid fa-location-dot"></i></h2>
+                    <h1 class="loc-name">--</h1>
+                </div>
+                <div class="details-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path d="M294.2 1.2c5.1 2.1 8.7 6.7 9.6 12.1l14.1 84.7 84.7 14.1c5.4.9 10 4.5 12.1 9.6s1.5 10.9-1.6 15.4l-38.5 55c-2.2-.1-4.4-.2-6.7-.2c-23.3 0-45.1 6.2-64
+                         17.1l0-1.1c0-53-43-96-96-96s-96 43-96 96s43 96 96 96c8.1 0 15.9-1 23.4-2.9c-36.6 18.1-63.3 53.1-69.8 94.9l-24.4 17c-4.5 3.1-10.3 3.8-15.4 1.6s-8.7-6.7-9.6-12.1L98.1 317.9
+                          13.4 303.8c-5.4-.9-10-4.5-12.1-9.6s-1.5-10.9 1.6-15.4L52.5 208 2.9 137.2c-3.2-4.5-3.8-10.3-1.6-15.4s6.7-8.7 12.1-9.6L98.1 98.1l14.1-84.7c.9-5.4 4.5-10 9.6-12.1s10.9-1.5 15.4 1.6L208 52.5 278.8 2.9c4.5-3.2 10.3-3.8 15.4-1.6zM144 208a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM639.9 
+                          431.9c0 44.2-35.8 80-80 80H288c-53 0-96-43-96-96c0-47.6 34.6-87 80-94.6l0-1.3c0-53 43-96 96-96c34.9 0 65.4 18.6 82.2 46.4c13-9.1 28.8-14.4 45.8-14.4c44.2 0 80 35.8 80 80c0 5.9-.6 11.7-1.9 17.2c37.4 6.7 65.8 39.4 65.8 78.7z"/>
+                    </svg>
+                </div>
+                <!-- <div class="details-temp">
+                    <h2 class="temp-main"></h2>
+                </div> -->
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,96L34.3,90.7C68.6,85,137,75,206,
+            101.3C274.3,128,343,192,411,181.3C480,171,549,85,617,96C685.7,107,754,213,823,213.3C891.4,213,960,107,1029,96C1097.1,85,
+            1166,171,1234,186.7C1302.9,203,1371,149,1406,122.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,
+            891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
+        </svg>
+
+        <div class="element">
+            <div class="element-data">
+                <i class="fa-solid fa-temperature-half"></i>
+                <h2 class="element-head">Temp<br>
+                    <span id="temp-data">--</span>
+                </h2>
+            </div>
+            <div class="element-data">
+                <i class="fa-solid fa-wind"></i>
+                <h2 class="element-head">Wind<br>
+                   <span id="wind-data">--</span>
+                </h2>
+            </div>
+            <div class="element-data">
+                <i class="fa-solid fa-droplet"></i>
+                <h2 class="element-head">Humidity<br>
+                   <span id="humidity-data">--</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+</html>

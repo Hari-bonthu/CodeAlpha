@@ -1,0 +1,87 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    font-size: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-container {
+    width: 32rem;
+    height: auto;
+    font-size: 1.2rem;
+    display: grid;
+    margin: 2rem;
+    border: solid 2px #0099ff ;
+    border-top: #fff;
+    border-radius: 10px;
+}
+
+.inner-container {
+    background: linear-gradient(to top, #0099ff ,#eeee9b);
+    width: 100%;
+    padding: 2%;
+    gap: 2rem;
+
+}
+
+.search-field {
+    display: flex;
+    justify-content:center;
+    padding: 5%;
+    margin: .3rem;
+}
+
+.search-field input {
+    all: unset;
+    color: #414141;
+    padding: .6rem; 
+    border-bottom:solid 1px gray ;
+}
+
+#btn {
+    all: unset;
+}
+
+.details {
+    font-size: 73%;
+    color: #414141;
+    display: grid;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin: 5% 2%;
+    text-align: center;
+}
+
+.details-loc {
+    display: inline-flex;
+    justify-self: center;
+    gap: .6rem;
+}
+.details-svg {
+    width: 12rem;
+    max-height: 9rem;
+}
+
+.element {
+    font-size: 1rem;
+    display: inline-flex;
+    justify-content: space-around ;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.element-data {
+    display: grid;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.element-data h2 {
+    font-size: 1.2rem;
+}
