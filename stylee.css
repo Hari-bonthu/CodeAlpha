@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-size: 17px;
+	color: #444;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #fff; 
+}
+
+.wrapper {
+	max-width: 1190px;
+    margin: auto;
+	position: relative; 
+    overflow: hidden;
+}
+
+/*Top Nav*/
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0; 
+}
+
+h2.logo a {
+	float: left;
+	color: #262020;
+	width: 56px;
+    text-decoration: none;
+}
+
+
+nav{
+    background:#feeeab;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem ;
+    overflow: hidden;
+
+}
+
+.right-items, .left-items{
+    display: flex;
+    align-items: center;
+    padding: 0 2rem 0 1.3rem;
+
+}
+
+nav .right-items a, .left-items a{
+    color: #f8853e;
+    text-decoration:none;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    
+}
+
+nav .right-items li, .left-items li {
+    padding: 0 2rem;
+
+}
+
+nav .logo {
+    font-family: "Protest Revolution", sans-serif;
+    position: relative;
+    right: 1rem;
+}
+
+.logo span {
+    font-family: "Protest Revolution", sans-serif;
+    position: relative;
+    left: 1.6rem;
+    bottom: 0.3rem;
+}
+
+/*Banner*/
+
+#banner {
+	height: 480px;
+	background: url(https://t4.ftcdn.net/jpg/07/09/26/57/240_F_709265705_WlzohC5vthoZUYidMelvdn0QUqBLsRKR.jpg) no-repeat center;
+    background-size: cover;
+	position: relative;
+	padding: 1px 0 0 0;
+}
+
+#banner h3 {
+    margin-top: 220px ;
+	opacity: 0.9;
+	color: #333;
+	font-size:4rem;
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+#banner span {
+    color: #f8853e;
+    font-weight: 900;
+}
+
+/*Gallery*/
+
+.gallery {
+    text-align: center;
+	padding: 3rem 0;
+	background:#feeeab;
+}
+
+.gallery h3 {
+    font-size: 2rem;
+    font-family: poppins;
+}
+
+.gallery h3 span {
+    color:#f8853e;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+.gallery-images {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery-images img {
+    border-radius: 20px;
+   filter: grayscale(1);
+   margin: .6rem 0rem;
+}
+
+.gallery-images img:hover {
+    filter: grayscale(0);
+}
+
+/* About */
+
+.about {
+
+    text-align: center;
+	padding: 100px 0;
+	background: url(https://t3.ftcdn.net/jpg/06/33/95/46/240_F_633954677_VnzEtGGo3zA8239CPQnJmZQHns3PauOq.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+
+.about p {
+    color: #5dae87;
+	font-size: 1.6rem;
+}
+
+.about h3 {
+    font-size: 4rem;
+}
+
+/* Card  */
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 350px;
+    margin-top: 54px;
+}
+
+.card img {
+    max-width: 180px;
+	max-height: 180px;
+	background: #222;
+	border-radius: 999px;
+    margin-top: -46px;
+    position: relative;
+    left: 1.5rem;
+
+}
+
+.card p {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+.card a {
+    padding: 1rem 1.3rem;
+    font-size: 1.3rem;
+    
+}
+
+/* Service */
+
+.services {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #feeeab;
+    overflow: hidden;
+}
+
+.services h3 {
+    color: #f8853e;
+    font-size: 2.6rem;
+
+}
+
+.services-list {
+	margin: 80px 0 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:2rem;
+}
+
+.services-list h5 {
+    position: relative;
+    color: #f8853e;
+    background-color: #fff; 
+    padding: 0.6rem 0;
+    margin-bottom: -0.3rem;
+
+}
+
+.services-list li:hover {
+    box-shadow: 0px 2px 40px rgba(0,0,0,.3);
+
+}
+
+/* Contact */
+.contact {
+    padding: 3rem 0;
+    background-color: #feeeab;
+    align-content: center;
+}
+.contact h3 {
+    text-align: center;
+    font-family: poppins;
+    font-size: 46px;
+    padding-bottom: 1rem;
+}
+
+.contact span  {
+    color: #f8853e;
+}
+
+.form-section form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.form-section input {
+    width:550px ;
+    height: 3rem;
+    margin-bottom: 1.3rem;
+}
+
+.form-section select {
+    max-width: 550px;
+}
+
+.form-section textarea {
+    max-width: 550px;
+}
+
+/* Footer */
+
+footer {
+	background: #444;
+	margin-top: 0px;
+	color: #fff;
+	padding: 3rem 0 1rem 1rem;
+}
+
+footer h4 {
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+footer span {
+    font-family: poppins;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+footer h5 {
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+footer a {
+    color: #f8853e;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+footer .items {
+    font-size: 12px;
+    padding: 1rem 0;
+}
+
+
+footer .items span {
+    padding: 0 0.7rem;
+    color: #feeeab;
+}
+
+
+@media screen and (max-width:800px) {
+    nav{
+         display: flex; 
+         padding: 1rem 0.3rem ;
+    }
+    .right-items{
+        padding: 0 .2rem 0 0.3rem;
+        
+    }
+
+    .right-items li a {
+       justify-content: right;
+       padding: .3rem 0;
+    }
+
+    .left-items li {
+       padding: .3rem 0;
+    }
+
+    .right-items, .left-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .logo {
+        font-family: "Protest Revolution", sans-serif;
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+
+    .form-section input {
+        max-width:350px ;
+        height: 3rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .form-section select {
+        width: 350px;
+    }
+    
+    .form-section textarea {
+        width: 350px;
+    }
+    
+}
