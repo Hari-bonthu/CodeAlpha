@@ -1,0 +1,748 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #333;
+}
+
+.wrapper {
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 2px;
+}
+
+aside.layout-menu {
+  height: 98vh;
+  width: 12rem;
+  background-color: #484848;
+  box-shadow: inset 0 -5px 20px rgb(168, 168, 168);
+  padding: 10px;
+  margin: 5px 5px 0 0;
+  border: 2px solid #444444;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.app-brand {
+  width: 100%;
+  display: flex;
+  font-family: "poppins";
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  font-family: "poppins";
+}
+
+.app-brand-top {
+  display: none;
+}
+
+.app-brand a {
+  color: #f88f8f;
+  font: 24px bold;
+  font-family: "Poetsen One";
+  text-decoration: none;
+  text-shadow: 3px 0px 0 #ffe;
+  letter-spacing: 5px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.menu-list ul {
+  margin: 0 1rem;
+}
+
+.menu-item {
+  width: 90%;
+  height: 2rem;
+  padding: 1rem;
+}
+
+.menu-item i {
+  padding: 5px;
+}
+.menu-list a {
+  color: antiquewhite;
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: 2px -2px 5px #f88f8f;
+}
+
+section.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 824px;
+}
+
+#layout-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0.6rem;
+  padding: 1rem;
+}
+
+#search-bar {
+  width: 548px;
+  min-width: 320px;
+  height: 0.2rem;
+  padding: 1rem;
+  border: 10px solid #fff;
+  border-radius: 500px;
+}
+
+.search-btn {
+  color: #f88f8f;
+  background: transparent;
+  border: none;
+  position: relative;
+  right: 10%;
+  cursor: pointer;
+}
+
+aside.layout-controls {
+  height: 98vh;
+  width: 17rem;
+  min-width: 10rem;
+  padding: 0 5px 10px 5px;
+  margin: 5px;
+  background-color: #444444;
+  border-radius: 15px;
+  overflow-x: hidden;
+}
+
+#control-btn {
+  display: none;
+}
+
+.playlist-tab {
+  width: auto;
+  height: 72%;
+  padding: 5px;
+  margin: 0.6rem 0.4rem 1.3rem 0.4rem;
+  background-color: #c36c6c;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.playlist-tab::-webkit-scrollbar {
+  display: none;
+}
+
+.playlist-tab h2 {
+  font-family: "poppins";
+  color: #e0e0e0;
+  font: bold;
+  text-align: center;
+  opacity: 40%;
+}
+
+#control-close {
+  display: none;
+}
+
+.control-item {
+  display: none;
+}
+
+.control-items {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  height: 2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0px 1rem;
+  position: relative;
+}
+
+.control-items label {
+  height: 25px;
+  align-items: center;
+  padding: 8px 2px;
+}
+
+.control-items input {
+  display: none;
+}
+
+#controls:checked + label > .fa-shuffle,
+#controls-loop:checked + label > .fa-repeat {
+  color: #f88f8f;
+}
+
+#controls:checked + label > .fa-shuffle::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 24px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* 
+#controls-loop:checked + label > .fa-repeat::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 10%;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+} */
+
+.audio-controls {
+  padding-left: 10px;
+  padding-top: 1rem;
+}
+#audio-player {
+  max-width: 15rem;
+  min-width: 6rem;
+}
+/* album styling */
+
+.layout-album {
+  margin: 0.2rem 0;
+  padding: 0.6rem 0 0 0;
+}
+
+.albums {
+  overflow: hidden;
+}
+
+.layout-title {
+  color: #e0e0e0;
+  font: 28px bold;
+  font-family: "Poetsen One";
+  text-shadow: 4px 0px 0 #f88f8f;
+  letter-spacing: 5px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.album-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 1.9rem;
+  padding: 1rem 2.5rem;
+  overflow-x: auto;
+}
+
+.album-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.album {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(218, 211, 211, 0.1);
+  position: relative;
+}
+
+.play-button {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 14px;
+  position: absolute;
+  top: -12%;
+  left: 82%;
+}
+
+.play-btn {
+  color: #444444;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+
+.album > img {
+  width: 100%;
+  height: 8rem;
+  object-fit: contain;
+}
+
+.play-button {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.song {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.song .play-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.song:hover {
+  background-color: #e0e0e0;
+}
+
+.song-info-container {
+  width: 100%;
+  height: 100%;
+  font-size: clamp(12px, 10vw, 18px);
+  line-height: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 10px;
+  background: transparent;
+  box-shadow: 0 4px 8px rgba(169, 166, 166, 0.4);
+  border-radius: 10px;
+  padding: 0.4rem 0.5rem;
+}
+
+.song-name {
+  padding-top: 0.2rem;
+  color: #e0e0e0;
+}
+
+.song-image {
+  height: 1.8rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+
+.layout-artist {
+  margin: 1rem 0;
+}
+
+.artists {
+  overflow: hidden;
+}
+
+.artist-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 1.9rem;
+  padding: 10px 40px;
+  overflow-x: auto;
+}
+
+.artist-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.artist > img {
+  width: 100px;
+  height: 100px;
+}
+
+.artist {
+  box-shadow: 0 4px 8px rgba(218, 211, 211, 0.1);
+  margin: 10px;
+  display: inline-block;
+}
+
+.album-list {
+  height: 200px;
+  width: 100%;
+}
+
+#control-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  section.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 240px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  section.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 530px;
+    min-width: 240px;
+  }
+  #search-bar {
+    width: 320px;
+    min-width: 5rem;
+    padding: 1rem;
+    border: 10px solid #fff;
+    border-radius: 500px;
+  }
+
+  .menu-list li {
+    padding: 1rem;
+  }
+
+  .menu-list a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 924px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  section.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 512px;
+    min-width: 340px;
+  }
+
+  #search-bar {
+    width: 320px;
+    min-width: 5rem;
+    padding: 1rem;
+    border: 10px solid #fff;
+    border-radius: 500px;
+    position: relative;
+  }
+
+  /* .search-btn {
+    color: #f88f8f;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: 90%;
+    bottom: 50%;
+  } */
+
+  .app-brand {
+    display: none;
+  }
+
+  .app-brand-top {
+    display: block;
+  }
+
+  .app-brand-top {
+    display: block;
+    width: 100%;
+    display: flex;
+    font-family: "poppins";
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    font-family: "poppins";
+  }
+
+  .app-brand-top a {
+    color: #f88f8f;
+    font: 30px bold;
+    font-family: "Poetsen One";
+    text-decoration: none;
+    text-shadow: 3px 0px 0 #ffe;
+    letter-spacing: 5px;
+  }
+
+  aside.layout-menu {
+    height: 98vh;
+    width: 6rem;
+    padding: 0;
+    background-color: #484848;
+    box-shadow: inset 0 -2px 10px rgb(168, 168, 168);
+    border: 2px solid #444444;
+    border-radius: 10px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  section.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    min-width: 240px;
+  }
+
+  aside.layout-menu {
+    height: 98vh;
+    width: 3rem;
+    padding: 0;
+    background-color: #484848;
+    box-shadow: inset 0 -2px 10px rgb(168, 168, 168);
+    border: 2px solid #444444;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 90%;
+    height: 2rem;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+  }
+
+  .menu-list a {
+    font-size: 0;
+    color: antiquewhite;
+    text-decoration: none;
+  }
+  .menu-item i {
+    font-size: 20px;
+    padding: 5px;
+    text-shadow: 2px -2px 5px #f88f8f;
+    display: block;
+  }
+
+  .search-btn {
+    display: none;
+  }
+
+  #search-bar {
+    width: 280px;
+    min-width: 5rem;
+    padding: 1rem;
+    border: 10px solid #fff;
+    border-radius: 500px;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  section.main {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    min-width: 240px;
+  }
+
+  #search-bar {
+    width: 230px;
+    min-width: 5rem;
+    height: 0.2rem;
+    padding: 0.8rem;
+    border: 10px solid #fff;
+    border-radius: 500px;
+  }
+
+  .layout-album {
+    margin: 0.2rem 0;
+  }
+
+  .layout-title {
+    color: #e0e0e0;
+    font: 1.5rem bold;
+    font-family: "Poetsen One";
+    text-shadow: 4px 0px 0 #f88f8f;
+    letter-spacing: 5px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .album-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 1.9rem;
+    margin-top: 0.4rem;
+    padding: 0.6rem 1rem;
+    overflow-x: auto;
+  }
+
+  .album {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(218, 211, 211, 0.1);
+    position: relative;
+  }
+
+  .play-button {
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 0px;
+    position: absolute;
+    top: -20%;
+    left: 78%;
+  }
+
+  .album > img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .play-button {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .layout-artist {
+    margin: 0.2rem 0;
+  }
+
+  .artist-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0.6rem 1rem;
+    overflow-x: auto;
+  }
+
+  .artist {
+    box-shadow: 0 4px 8px rgba(218, 211, 211, 0.1);
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+    font-family: "poppins";
+  }
+
+  .artist > img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 4px;
+  }
+
+  /* #layout-controls {
+    width: 120px;
+    padding: 0;
+    margin: 0;
+  } */
+
+  .control-item {
+    display: none;
+  }
+
+  .song {
+    overflow: hidden;
+  }
+
+  #control-menu {
+    display: block;
+  }
+
+  #audio-player {
+    width: 100%;
+  }
+
+  /* aside.layout-menu,
+  aside.layout-controls {
+    flex: 1;
+  }
+  section.main {
+    flex: 2;
+  } */
+
+  aside.layout-controls {
+    display: none;
+    overflow-x: visible;
+    position: absolute;
+    right: -2px;
+  }
+  aside.layout-controls.visible {
+    display: block;
+  }
+
+  @media screen and (max-width: 632px) {
+    #control-btn {
+      display: block;
+    }
+  }
+  #control-btn {
+    color: antiquewhite;
+    font-size: large;
+    background: none;
+    border: none;
+  }
+
+  #control-close {
+    display: block;
+    color: #f88f8f;
+    background-color: #444444;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+    padding: 14px 14px;
+    padding-right: 16px;
+    position: absolute;
+    left: -34px;
+    top: 0px;
+  }
+
+  /* .playlist-tab,
+  .control-items {
+    display: none;
+  }
+
+  #layout-controls {
+    width: 1px;
+  }
+
+  #audio-player {
+    width: 380px;
+    padding: 8px 20px;
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 80px;
+  } */
+}
