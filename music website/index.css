@@ -691,21 +691,24 @@ aside.layout-controls {
     flex: 2;
   } */
 
-  aside.layout-controls {
-    display: none;
+    aside.layout-controls {
+    opacity: 0;
+    visibility: hidden;
     overflow-x: visible;
     position: absolute;
     right: -2px;
-  }
-  aside.layout-controls.visible {
-    display: block;
+    transition: opacity 0.3s ease;
   }
 
-  @media screen and (max-width: 632px) {
-    #control-btn {
-      display: block;
-    }
+  aside.layout-controls.visible {
+    opacity: 1;
+    visibility: visible;
   }
+
+  #control-btn {
+    display: block;
+  }
+  
   #control-btn {
     color: antiquewhite;
     font-size: large;
